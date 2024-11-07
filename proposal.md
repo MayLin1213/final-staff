@@ -2,11 +2,11 @@
 
 ## What will (likely) be the title of your project?
 
-TODO
+Oracle
 
 ## In just a sentence or two, summarize your project. (E.g., "A website that lets you buy and sell stocks.")
 
-TODO
+A tarot cards discord bot that predicts people's future
 
 ## In a paragraph or more, detail your project. What will your software do? What features will it have? How will it be executed?
 
