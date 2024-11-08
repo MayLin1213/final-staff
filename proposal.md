@@ -42,4 +42,4 @@ A comprehensive educational component where users can explore detailed explanati
 
 ## In a paragraph or more, outline your next steps. What new skills will you need to acquire? What topics will you need to research? If working with one of two classmates, who will do what?
 
-We will need to learn how Discord bots work and how to use Python to develop one effectively. Once we have a solid foundation, each team member will focus on coding specific functions for the bot I (Mai) will draw the tarot cards and the other members will help if needed. 
+We will need to learn how Discord bots work and how to use Python to develop one effectively. We'll start by studying the basics of Discord's API and the discord.py library to understand how to create commands, manage user interactions, and respond within the platform. Once we have a solid foundation, each team member will focus on coding specific functions for the bot I (Mai) will draw the tarot cards and the other members will help if needed. 
