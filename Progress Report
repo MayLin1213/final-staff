@@ -1,0 +1,29 @@
+# Status Report
+
+#### Your name
+
+Michelle, Mai, May
+
+#### Your section leader's name
+
+Michelle?
+
+#### Project title
+
+Oracle Bot
+
+***
+
+Short answers for the below questions suffice. If you want to alter your plan for your project (and obtain approval for the same), be sure to email your section leader directly!
+
+#### What have you done for your project so far?
+
+So far May and I have tested the bot to make sure it can respond when a key word has been used in the discord chat. Mai is almost done with creating the cards for our bot.
+
+#### What have you not done for your project yet?
+
+The bot is not able to recieve input from users yet and isn't able to show pictures of our cards yet.
+
+#### What problems, if any, have you encountered?
+
+I had a problem where the discord module wasn't working but I found out that all I had to do was update it. Not spam install in the terminal a bunch of times
