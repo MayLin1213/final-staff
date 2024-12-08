@@ -96,6 +96,132 @@ class Client(discord.Client):
                     "Judgement": "A reckoning is ahead. You’ll soon face a decision that requires reflection and renewal.",
                     "The World": "A sense of wholeness and accomplishment awaits. The journey will come full circle."
                 }
+                #overall expression
+                overall_meanings = {
+                    "The Fool": "A time for new beginnings and adventures. Embrace the unknown.",
+                    "The Magician": "You have the power to manifest your goals. Focus and determination are key.",
+                    "The High Priestess": "Trust your intuition and allow things to unfold naturally.",
+                    "The Empress": "A period of abundance and growth. Nurture your goals.",
+                    "The Emperor": "Structure and discipline will bring success. Lead with confidence.",
+                    "The Pope": "Tradition and guidance play an important role now. Follow established paths.",
+                    "The Lovers": "A time of deep connections and important choices.",
+                    "The Chariot": "Victory is within reach, but stay focused and disciplined.",
+                    "Strength": "Inner strength and courage will overcome obstacles.",
+                    "The Hermit": "Time for introspection and self-discovery. Seek your inner truth.",
+                    "Wheel of Fortune": "Life is changing; embrace the ups and downs.",
+                    "Justice": "Fairness and accountability are key. Decisions will have long-term effects.",
+                    "The Hanged Man": "Let go of control and view challenges from a new perspective.",
+                    "Death": "Transformation and new beginnings await. Let go of the past.",
+                    "Temperance": "Balance and moderation will bring harmony.",
+                    "The Devil": "Be aware of temptations and unhealthy attachments.",
+                    "The Tower": "Sudden change may feel chaotic but leads to growth.",
+                    "The Star": "Hope and inspiration guide you forward.",
+                    "The Moon": "Uncertainty and illusions may cloud judgment. Trust your intuition.",
+                    "The Sun": "Joy and success shine in your life. Embrace positivity.",
+                    "Judgement": "A time for reflection and making life-changing decisions.",
+                    "The World": "Fulfillment and completion of a major life cycle."
+                }
+                #love 
+                love_meanings = {
+                    "The Fool": "Be open to new relationships, but avoid being reckless.",
+                    "The Magician": "Trustworthy connections may form. Show your true self.",
+                    "The High Priestess": "Be patient and observant; don’t rush into commitments.",
+                    "The Empress": "Strong, nurturing relationships will flourish.",
+                    "The Emperor": "Build stable relationships based on mutual respect.",
+                    "The Pope": "Seek advice or wisdom in your relationships.",
+                    "The Lovers": "Romantic relationships are strengthened or tested by decisions.",
+                    "The Chariot": "Progress in love requires determination and compromise.",
+                    "Strength": "Show compassion and patience in relationships.",
+                    "The Hermit": "Temporary isolation can help clarify what you truly need in love.",
+                    "Wheel of Fortune": "A sudden change in your romantic life may occur.",
+                    "Justice": "Be honest and fair in your relationships.",
+                    "The Hanged Man": "Patience is needed to navigate relationship struggles.",
+                    "Death": "Old patterns in relationships may end, making way for growth.",
+                    "Temperance": "Mutual understanding will strengthen relationships.",
+                    "The Devil": "Avoid toxic relationships or unhealthy patterns.",
+                    "The Tower": "A breakup or major shift in a relationship is possible.",
+                    "The Star": "Romantic connections are renewed with positivity.",
+                    "The Moon": "Emotions in relationships may feel confusing. Seek clarity.",
+                    "The Sun": "Happiness and harmony define your relationships.",
+                    "Judgement": "Forgiveness and reconciliation may heal relationships.",
+                    "The World": "Relationships reach a satisfying and harmonious state."
+                }
+                #health
+                health_meanings = {
+                    "The Fool": "Take care of yourself and avoid unnecessary risks.",
+                    "The Magician": "Maintain balance to ensure continued well-being.",
+                    "The High Priestess": "Inner calm will improve your mental and physical health.",
+                    "The Empress": "Focus on self-care and emotional well-being.",
+                    "The Emperor": "Focus on physical strength and endurance.",
+                    "The Pope": "Balance your physical and spiritual well-being.",
+                    "The Lovers": "Emotional health is key to overall well-being.",
+                    "The Chariot": "Physical health improves through discipline and action.",
+                    "Strength": "Physical and mental resilience will bring recovery and growth.",
+                    "The Hermit": "Rest and solitude will rejuvenate your health.",
+                    "Wheel of Fortune": "Your health may fluctuate, but positive changes are possible.",
+                    "Justice": "Balance in life improves your overall health.",
+                    "The Hanged Man": "Focus on mental clarity and letting go of stress.",
+                    "Death": "A fresh approach can significantly improve health.",
+                    "Temperance": "Focus on balance in diet, exercise, and rest.",
+                    "The Devil": "Break free from harmful habits affecting your well-being.",
+                    "The Tower": "Sudden issues may arise; focus on resilience.",
+                    "The Star": "Healing and recovery are on the way.",
+                    "The Moon": "Pay attention to emotional well-being.",
+                    "The Sun": "Your health is radiant and improving.",
+                    "Judgement": "Evaluate habits for long-term health improvements.",
+                    "The World": "Physical and mental well-being are at their peak."
+                }
+                #wealth
+                wealth_meanings = {
+                    "The Fool": "New opportunities may arise, but manage risks wisely.",
+                    "The Magician": "Positive changes are on the horizon. Seize opportunities.",
+                    "The High Priestess": "Avoid impulsive spending and think carefully about investments.",
+                    "The Empress": "Opportunities for growth and financial stability are present.",
+                    "The Emperor": "Hard work and organization will lead to financial security.",
+                    "The Pope": "Traditional approaches will yield the best results.",
+                    "The Lovers": "Partnerships may lead to financial growth or challenges.",
+                    "The Chariot": "Success in financial ventures comes through persistence.",
+                    "Strength": "Financial stability comes through calm and steady decisions.",
+                    "The Hermit": "Reflect on past decisions to guide future financial planning.",
+                    "Wheel of Fortune": "Unexpected financial gains or losses could arise.",
+                    "Justice": "Make financial decisions with careful consideration of consequences.",
+                    "The Hanged Man": "Delays may occur, but a change in strategy could lead to success.",
+                    "Death": "Ending unproductive habits can lead to financial success.",
+                    "Temperance": "Financial stability comes through careful planning.",
+                    "The Devil": "Beware of overindulgence or financial traps.",
+                    "The Tower": "Financial instability may require quick adaptation.",
+                    "The Star": "Optimism and creativity will improve financial prospects.",
+                    "The Moon": "Avoid risky financial decisions during unclear times.",
+                    "The Sun": "Financial success comes through confidence and optimism.",
+                    "Judgement": "Reflect on past financial choices to guide future success.",
+                    "The World": "Financial goals are achieved with success."
+                }
+                #angel
+                angel_guidance = {
+                    "The Fool": "Trust in divine timing and take a leap of faith.",
+                    "The Magician": "You have all the tools you need; believe in your abilities.",
+                    "The High Priestess": "Listen to your inner wisdom for clarity and peace.",
+                    "The Empress": "Open your heart to love and creativity.",
+                    "The Emperor": "Take charge and assert your authority with kindness.",
+                    "The Pope": "Seek spiritual guidance to stay grounded and aligned.",
+                    "The Lovers": "Follow your heart and make choices with love.",
+                    "The Chariot": "You are in control; steer your path with confidence.",
+                    "Strength": "Trust your inner power and act with gentle strength.",
+                    "The Hermit": "Take a step back and find answers within.",
+                    "Wheel of Fortune": "Embrace change and trust the universe's plan.",
+                    "Justice": "Stay true to your values and act with integrity.",
+                    "The Hanged Man": "Release expectations and surrender to divine flow.",
+                    "Death": "Embrace transformation and trust the rebirth process.",
+                    "Temperance": "Find harmony through patience and inner peace.",
+                    "The Devil": "Release what no longer serves your highest good.",
+                    "The Tower": "Embrace change and trust in the rebuilding process.",
+                    "The Star": "Shine your light and stay hopeful for the future.",
+                    "The Moon": "Trust your intuition and embrace the unknown.",
+                    "The Sun": "Bask in the warmth of joy and abundance.",
+                    "Judgement": "Listen to your higher calling and make aligned choices.",
+                    "The World": "Celebrate your journey and embrace the rewards."
+                }
+
 
                 # Card Images
                 card_images = {
