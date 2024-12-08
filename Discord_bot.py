@@ -156,4 +156,4 @@ intents.message_content = True
 
 # Create the client and run the bot
 client = Client(intents=intents)
-client.run('MTMwNTkxMDY1NTg1NjkzOTA3OQ.G1j45U.u4BSwamp57VJe0jgpnpjAI4B0m40C6WKuIihNY')
+client.run(#Put the TOKEN here)
