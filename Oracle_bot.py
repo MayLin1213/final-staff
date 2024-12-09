@@ -11,7 +11,17 @@ class Client(discord.Client):
             return
         
         if message.content.startswith('$fortune'):
-            while True:  # Loop for continuous readings
+             
+                await message.channel.send("Welcome to the Tarot bot! What's your name?")
+                def check_name(m):
+                    return m.author == message.author and m.channel == message.channel
+
+                name_msg = await self.wait_for('message', check=check_name)
+                user_name = name_msg.content.strip()
+
+
+                await message.channel.send(f"Nice to meet you, {user_name}! Let's start your tarot reading.")
+                while True:
                 await message.channel.send("Please enter your choice (Overall, Past, Present, Future, Love, Health, Wealth, Angel Guidance (AG)) to get a tarot card reading.")
 
                 def check(m):
