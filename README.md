@@ -1,6 +1,6 @@
 Demo video link: https://youtu.be/8Zq33hNhAoY
 
-#something about the experience
+#something about the experience/n
 Michelle: We struggled with learning how to use discord bots and connect the code to it using the token of it. There was also a problem where the module wasn't updated to the latest version so we had to do that before anything else. Even following the videos was confusing because some videos would just tell you to put in a code without telling you why
 
 Mai: The difficulty I faced was the images link. Initially, I tried to make the bot pull out from my computer's gallery but the output I kept getting was None. So I fixed it by using the URL links of the images I posted online but that also didn't work. I then look up on youtube and other resources and found out my links were missing .jpg. After I added it to the link, the images work perfectly! 
