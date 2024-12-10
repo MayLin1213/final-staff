@@ -346,3 +346,4 @@ https://www.youtube.com/watch?v=SPTfmiYiuok&ab_channel=freeCodeCamp.org
 https://www.youtube.com/watch?v=82xCT7fC60k
 https://labyrinthos.co/
 https://www.californiapsychics.com/blog/?s=Card+Meaning
+https://www.youtube.com/watch?v=sLbMNZQHNms&list=PLOEbl4-1QPZZzG9UHV07oDzcjlSLqsNvR
