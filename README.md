@@ -1,6 +1,8 @@
 Demo video link: https://youtu.be/8Zq33hNhAoY
 Team member: May Lin(Senior)/ Mai Dinh(freshman)/ Michelle Owusua Korsah(freshman)
 
+Core idea: I hope this little chatbot can bring comfort and heal your heart on days when everything feels overwhelming—without costing you a dime：） As someone who enjoys using fortune-telling to get a glimpse of the future, I understand how expensive this habit can be. That’s why I created this bot: a way to simulate the experience of tarot readings with an immersive, randomized card-drawing system built in Python. It’s a small tool to satisfy people like us while saving us much money.
+
 #something about the experience of writing this discord bot
 
 Michelle: We struggled with learning how to use discord bots and connect the code to it using the token of it. There was also a problem where the module wasn't updated to the latest version so we had to do that before anything else. Even following the videos was confusing because some videos would just tell you to put in a code without telling you why
