@@ -1,3 +1,14 @@
+Demo video link: https://youtu.be/8Zq33hNhAoY
+
+#something about the experience
+Michelle: We struggled with learning how to use discord bots and connect the code to it using the token of it. There was also a problem where the module wasn't updated to the latest version so we had to do that before anything else. Even following the videos was confusing because some videos would just tell you to put in a code without telling you why
+
+Mai: The difficulty I faced was the images link. Initially, I tried to make the bot pull out from my computer's gallery but the output I kept getting was None. So I fixed it by using the URL links of the images I posted online but that also didn't work. I then look up on youtube and other resources and found out my links were missing .jpg. After I added it to the link, the images work perfectly! 
+
+May: What I enjoyed most while working on this bot was seeing it slowly take shape, aligning more and more with the vision I had in mind as I updated it in the background. While it's still different from reading tarot cards in person, there are areas to refine, like expanding the meanings of each card. It has evolved into an interactive chatbot that users can use to engage.
+
+In the process, I struggled with balancing simplicity and immersion, rethinking the structure to feel more intuitive, and debugging technical issues like duplicate prompts and input handling. Despite these challenges, the process has been rewarding, and I'm proud of how far the bot has come now.
+
 # final-staff
 git repo for final project of CIS1051 Spring 2024
 
