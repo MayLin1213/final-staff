@@ -9,6 +9,28 @@ Mai: The difficulty I faced was the images link. Initially, I tried to make the 
 
 May: What I enjoyed most while working on this bot was seeing it slowly take shape, aligning more and more with the vision I had in mind as I updated it in the background. While it's still different from reading tarot cards in person, there are areas to refine, like expanding the meanings of each card. It has evolved into an interactive chatbot that users can use to engage. In the process, I struggled with balancing simplicity and immersion, rethinking the structure to feel more intuitive, debugging issues like duplicate prompts and input handling, and sometimes keptlooping. Despite these challenges, the process has been rewarding, and I'm proud of how far the bot has come now.
 
+#Some big challenges we faced
+1.Setting up and connecting the bot to Discord:
+Initially, we struggled to establish the basic connection between our code and the Discord bot. Each of us watched multiple YouTube tutorials to learn how Discord bots operate. However, we ran into issues with capturing user input within the Discord server, which delayed our progress.
+
+2.Card meanings mismatched with cards:
+After successfully setting up the bot, we realized we needed separate dictionaries for each card's meanings in different areas (e.g., love, health, wealth) to ensure the correct meanings aligned with the chosen cards. Initially, our cards and meanings were completely mismatched, causing significant confusion.
+
+3.Basic and mechanical first version:
+The first version of the tarot bot was simple, listing all categories like Past, Present, Future, Health, Wealth, and Love, for the user to choose from. However, feedback from friends who tested it revealed it felt too mechanical—more like selecting from a menu rather than experiencing an intuitive tarot reading.
+
+4.Improving user experience:
+In the second version, we refined the process by presenting Past, Present, and Future readings first, then allowing users to choose specific areas for additional guidance based on their mindset. This adjustment created a more immersive experience, resembling real tarot readings. We also added a countdown feature to enhance the user's sense of engagement.
+
+5.Refining countdown timing:
+Adding the countdown posed challenges in finding the right duration—too short felt rushed, while too long seemed tedious. We had to carefully balance the timing to ensure it added to the experience without dragging on.
+
+6.Loop and logic issues:
+After splitting the process into two parts, we encountered a persistent issue where the bot kept cycling through the same questions due to the while True loop incorrectly including or excluding certain conditions. For instance, handling the "no" response properly required placing it correctly within the loop to avoid unwanted repetitions.
+
+7.Stopping the bot properly:
+One of the biggest technical hurdles was figuring out how to stop the bot. With all three of us logged into the Discord bot, it wasn’t clear how to log out and stop it entirely. On macOS, the usual Windows Ctrl+C command didn’t work. After hours of trial and error, Mitchell and Mai found an online guide that explained using Command+Period (Command + .) to stop the bot successfully. This resolved the issue of the bot repeatedly sending identical prompts.
+
 # final-staff
 git repo for final project of CIS1051 Spring 2024
 
