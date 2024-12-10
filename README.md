@@ -10,6 +10,7 @@ Mai: The difficulty I faced was the images link. Initially, I tried to make the 
 May: What I enjoyed most while working on this bot was seeing it slowly take shape, aligning more and more with the vision I had in mind as I updated it in the background. While it's still different from reading tarot cards in person, there are areas to refine, like expanding the meanings of each card. It has evolved into an interactive chatbot that users can use to engage. In the process, I struggled with balancing simplicity and immersion, rethinking the structure to feel more intuitive, debugging issues like duplicate prompts and input handling, and sometimes keptlooping. Despite these challenges, the process has been rewarding, and I'm proud of how far the bot has come now.
 
 #Some big challenges we faced
+
 1.Setting up and connecting the bot to Discord:
 Initially, we struggled to establish the basic connection between our code and the Discord bot. Each of us watched multiple YouTube tutorials to learn how Discord bots operate. However, we ran into issues with capturing user input within the Discord server, which delayed our progress.
 
