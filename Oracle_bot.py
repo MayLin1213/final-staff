@@ -293,40 +293,40 @@ class Client(discord.Client):
                 )
                     def check(m):
                         return m.author == message.author and m.channel == message.channel
-                
-                    choice_msg=await self.wait_for('message',check=check)
-                    choice = choice_msg.content.lower()
+                    while True:
+                        choice_msg=await self.wait_for('message',check=check)
+                        choice = choice_msg.content.lower()
 
     # Define the function to get the meaning of a card      
-                    if choice == "love":
-                        card, meaning = random.choice(list(love_meanings.items()))
-                        image = card_images.get(card)
-                        await message.channel.send(f"{user_name}, your Love card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
+                        if choice == "love":
+                            card, meaning = random.choice(list(love_meanings.items()))
+                            image = card_images.get(card)
+                            await message.channel.send(f"{user_name}, your Love card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
 
-                    elif choice == "health":
-                        card, meaning = random.choice(list(health_meanings.items()))
-                        image = card_images.get(card)
-                        await message.channel.send(f"{user_name}, your Health card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
-                    elif choice == "wealth":
-                        card, meaning = random.choice(list(wealth_meanings.items()))
-                        image = card_images.get(card)
-                        await message.channel.send(f"{user_name}, your Wealth card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
-                    elif choice == "no":
-                        await message.channel.send(f"Thank you for using the Tarot bot, {user_name}! Goodbye!")
-                        break
-                    else:
-                        await message.channel.send("Invalid choice. Please type Love, Health, Wealth, or No to exit.")
-                        continue
+                        elif choice == "health":
+                            card, meaning = random.choice(list(health_meanings.items()))
+                            image = card_images.get(card)
+                            await message.channel.send(f"{user_name}, your Health card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
+                        elif choice == "wealth":
+                            card, meaning = random.choice(list(wealth_meanings.items()))
+                            image = card_images.get(card)
+                            await message.channel.send(f"{user_name}, your Wealth card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
+                        elif choice == "no":
+                            await message.channel.send(f"Thank you for using the Tarot bot, {user_name}! Goodbye!")
+                            break
+                        else:
+                            await message.channel.send("Invalid choice. Please type Love, Health, Wealth, or No to exit.")
+                            continue
 
-                        
-                        
-                    await message.channel.send("Would you like to read another tarot card? (yes/y or no/o)")
+                            
+                            
+                        await message.channel.send("Would you like to read another tarot card? (yes/y or no/o)")
 
-                    another_reading_msg = await self.wait_for('message', check=check)
-                        
-                    if another_reading_msg.content.lower() not in ["yes", "y"]:
-                        await message.channel.send(f"Thank you for using the Tarot bot, {user_name}! Goodbye!")
-                        break
+                        another_reading_msg = await self.wait_for('message', check=check)
+                            
+                        if another_reading_msg.content.lower() not in ["yes", "y"]:
+                            await message.channel.send(f"Thank you for using the Tarot bot, {user_name}! Goodbye!")
+                            break
 
 
 intents = discord.Intents.default()
