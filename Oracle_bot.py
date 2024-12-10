@@ -30,7 +30,7 @@ class Client(discord.Client):
                         return m.author == message.author and m.channel == message.channel
 
                     try:
-                        ready_msg = await self.wait_for('message', timeout=30, check=check_ready)
+                        ready_msg = await self.wait_for('message', timeout=10, check=check_ready)
                     except asyncio.TimeoutError:
                         await message.channel.send("The sacred countdown begins!")
                         for i in range(5, 0, -1):
@@ -40,9 +40,6 @@ class Client(discord.Client):
                     else:
                         await message.channel.send("Thank you! Let's reveal your card.")
 
-                    await message.channel.send(
-                        f"{user_name}, please enter your choice: (Overall, Past, Present, Future, Love, Health, Wealth, Angel Guidance (AG))."
-                    )
 
                     
 
@@ -301,55 +298,32 @@ class Client(discord.Client):
                     choice = choice_msg.content.lower()
 
     # Define the function to get the meaning of a card      
-                    if choice == "past":
-                        card,meaning=random.choice(list(past_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}") 
-                    
-                    elif choice == "present":
-                        card, meaning = random.choice(list(present_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
-
-                    elif choice == "future":
-                        card, meaning = random.choice(list(future_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
-                    
-                    elif choice == "love":
+                    if choice == "love":
                         card, meaning = random.choice(list(love_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
+                        image = card_images.get(card)
+                        await message.channel.send(f"{user_name}, your Love card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
 
                     elif choice == "health":
                         card, meaning = random.choice(list(health_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
-
+                        image = card_images.get(card)
+                        await message.channel.send(f"{user_name}, your Health card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
                     elif choice == "wealth":
                         card, meaning = random.choice(list(wealth_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
-
-                    elif choice=="overall":
-                        card,meaning=random.choice(list(overall_meanings.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
-
-                    elif choice == "angel guidance" or choice== "ag":
-                        card, meaning = random.choice(list(angel_guidance.items()))
-                        image=card_images.get(card)
-                        await message.channel.send(f"Card: {card}\nMeaning: {meaning}\n{image}")
-
-
+                        image = card_images.get(card)
+                        await message.channel.send(f"{user_name}, your Wealth card is:\n\nCard: {card}\nMeaning: {meaning}\n{image}")
+                    elif choice == "no":
+                        await message.channel.send(f"Thank you for using the Tarot bot, {user_name}! Goodbye!")
+                        break
                     else:
-                        await message.channel.send("Invalid choice. Please enter: Overall, Past, Present, Future, Love, Health, Wealth, or Angel Guidance (AG)'.")
+                        await message.channel.send("Invalid choice. Please type Love, Health, Wealth, or No to exit.")
                         continue
-                    
+
+                        
+                        
                     await message.channel.send("Would you like to read another tarot card? (yes/y or no/o)")
 
                     another_reading_msg = await self.wait_for('message', check=check)
-                    
+                        
                     if another_reading_msg.content.lower() not in ["yes", "y"]:
                         await message.channel.send(f"Thank you for using the Tarot bot, {user_name}! Goodbye!")
                         break
